@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <style>
+    h2 {
+      font-size: 30px;
+      color: #193746;
+      text-decoration: underline;
+      
+    }
+    label {
+      font-size: 20px;
+      color: #193746;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #45a049;
+      color: white;
+      cursor: pointer;
+      border: 2px solid #45a049;
+      border-radius: 5px;
+      
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    input[type="file"]:hover {
+     size-adjust: auto;
+     
+     
+    }
+    legend {
+      font-size: 25px;
+      color: #193746;
+    }
+
+  </style>
+</head>
+<body style="background-color: beige;">
+
+  <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">User html Form</h2>
+
+  <form>
+<fieldset>
+  <legend>Personal info</legend>
+    <p>
+      <label>Full Name:</label>
+      <input type="text" name="fullname" placeholder="Enter your full name" required>
+    </p>
+
+    <p>
+      <label>Email Address:</label>
+      <input type="email" name="email" placeholder="Enter your email" required>
+    </p>
+
+    <p>
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" placeholder="Enter your phone number" >
+    </p>
+
+    <p>
+      <label >Age group:</label><br>
+      <input type="radio" name="age" value="under18"> Under 18<br>
+      <input type="radio" name="age" value="18-30"> 18-30<br>
+      <input type="radio" name="age" value="30-50"> 30-50<br>
+      <input type="radio" name="age" value="50+"> 50+<br>
+    </p>
+
+    <p>
+      <label>Gender:</label><br>
+      <input type="radio" name="gender" value="male"> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other<br>
+    </p>
+    </fieldset><br>
+    <fieldset>
+      <legend>Additional info</legend>
+    
+
+    <p>
+      <label>Select Your Country:</label>
+      <input list="countries" name="country">
+      <datalist id="countries">
+        <option value="Nepal">
+        <option value="USA">
+        <option value="Korea">
+      </datalist>
+    </p>
+      <p>
+        <label>What features do you like the most:</label><br><br>
+       <input type="checkbox" name="UI design" value="yes"> UI design<br>
+      </p>
+      <p>
+        <input type="checkbox" name="content" value="yes"> content<br>
+      </p>
+      <p>
+        <input type="checkbox" name="speed" value="yes"> speed<br>
+      </p> 
+      <p>
+        <input type="checkbox" name="mobile friendliness" value="yes"> mobile friendliness
+      </p>
+      </fieldset><br>
+      <fieldset>
+        <legend>Feedback</legend>
+    <p>
+      <label>Rate you're experience:</label>
+      <select name="rating"> 
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+       </select>
+      </p>
+    <p>
+      <label>Comments or Suggestions:</label><br><br>
+      <textarea name="comments" rows="4" cols="50" placeholder="Enter your comments or suggestions" maxlength="100"></textarea>
+    </p>
+    <p>
+      <label>Would you recommend our site to others?</label>
+      <input type="radio" name="recommend" value="yes"> Yes
+      <input type="radio" name="recommend" value="no"> No
+    </p>
+    <p>
+    <label>Upload a screenshot:</label>
+    <input type="file" name="screenshot" accept="image/*">
+    </p>
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+  </form>
